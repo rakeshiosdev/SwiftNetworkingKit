@@ -1,6 +1,6 @@
 import Foundation
 import Testing
-@testable import Networking
+@testable import SwiftNetworkingKit
 
 struct IdempotentTestRequest: NetworkRequest {
     typealias Response = [Account]

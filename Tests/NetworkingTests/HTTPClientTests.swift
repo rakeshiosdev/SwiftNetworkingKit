@@ -1,6 +1,6 @@
 import Foundation
 import Testing
-@testable import Networking
+@testable import SwiftNetworkingKit
 
 struct Account: Codable, Sendable, Equatable {
     let id: String

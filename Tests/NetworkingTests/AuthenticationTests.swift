@@ -1,6 +1,6 @@
 import Foundation
 import Testing
-@testable import Networking
+@testable import SwiftNetworkingKit
 
 final actor MockTokenProvider: AccessTokenProvider {
     private var token: String?

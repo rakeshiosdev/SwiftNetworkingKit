@@ -1,32 +1,32 @@
-// swift-tools-version: 6.4
+// swift-tools-version: 6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-    name: "Networking",
+    name: "SwiftNetworkingKit",
+    platforms: [.iOS(.v16), .macOS(.v14)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "Networking",
-            targets: ["Networking"]
+            name: "SwiftNetworkingKit",
+            targets: ["SwiftNetworkingKit"]
         ),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "Networking",
+            name: "SwiftNetworkingKit",
+            path: "Sources/Networking",
             swiftSettings: [
                 .enableUpcomingFeature("ApproachableConcurrency"),
-            ],
+            ]
         ),
         .testTarget(
-            name: "NetworkingTests",
-            dependencies: ["Networking"],
+            name: "SwiftNetworkingKitTests",
+            dependencies: ["SwiftNetworkingKit"],
+            path: "Tests/NetworkingTests",
             swiftSettings: [
                 .enableUpcomingFeature("ApproachableConcurrency"),
-            ],
+            ]
         ),
     ]
 )
